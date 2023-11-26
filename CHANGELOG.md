@@ -1,5 +1,11 @@
 # imagebindb
 
+## 1.0.5
+
+### Patch Changes
+
+- 9ce2ad7: fix patch
+
 ## 1.0.3
 
 ### Patch Changes
