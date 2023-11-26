@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/vishakh-abhayan/ImageBinDB#readme",
   "devDependencies": {
+    "@changesets/cli": "^2.26.2",
     "typescript": "^5.3.2"
   },
   "dependencies": {

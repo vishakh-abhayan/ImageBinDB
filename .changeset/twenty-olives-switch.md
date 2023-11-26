@@ -1,0 +1,5 @@
+---
+"imagebindb": patch
+---
+
+updated doc
