@@ -1,4 +1,4 @@
-# ImageBinDB
+# ImageBinDB 💫
 
 ## Introduction
 
