@@ -19,12 +19,7 @@ npm install imagebindb
 ### Importing the Module
 
 ```javascript
-import {
-  imageToBinary,
-  storeImage,
-  retrieveImage,
-  binaryToImageURL,
-} from "imagebindb";
+import {imageToBinary,storeImage,retrieveImage,binaryToImageURL} from "imagebindb";
 ```
 
 ### Converting an Image to Binary
@@ -63,23 +58,59 @@ const imageUrl = binaryToImageURL(binaryData);
 
 ## API Reference
 
-> `imageToBinary(image: File): Promise<ArrayBuffer>`
+This section details the functions available in the `ImageBinDB` module, along with their descriptions and usage.
+
+### `imageToBinary(image: File): Promise<ArrayBuffer>`
 
 Converts an image file to binary data.
 
-> `storeImage(dbName: string, key: string, data: ArrayBuffer): Promise<void>`
+**Parameters:**
+- `image`: `File` - The image file to convert.
+
+**Returns:**
+- `Promise<ArrayBuffer>` - A promise that resolves with the binary data.
+
+---
+
+### `storeImage(dbName: string, key: string, data: ArrayBuffer): Promise<void>`
 
 Stores binary data in IndexedDB.
 
-> `retrieveImage(dbName: string, key: string): Promise<ArrayBuffer | undefined>`
+**Parameters:**
+- `dbName`: `string` - The name of the IndexedDB database.
+- `key`: `string` - The key under which to store the data.
+- `data`: `ArrayBuffer` - The binary data to be stored.
+
+**Returns:**
+- `Promise<void>`
+
+---
+
+### `retrieveImage(dbName: string, key: string): Promise<ArrayBuffer | undefined>`
 
 Retrieves binary data from IndexedDB.
 
-> `binaryToImageURL(binaryData: ArrayBuffer): string`
+**Parameters:**
+- `dbName`: `string` - The name of the IndexedDB database.
+- `key`: `string` - The key under which the data is stored.
+
+**Returns:**
+- `Promise<ArrayBuffer | undefined>` - A promise that resolves with the retrieved binary data or undefined if the key is not found.
+
+---
+
+### `binaryToImageURL(binaryData: ArrayBuffer): string`
 
 Converts binary data to an image URL.
 
-### Contributing
+**Parameters:**
+- `binaryData`: `ArrayBuffer` - The binary data to be converted.
+
+**Returns:**
+- `string` - The image URL created from the binary data.
+
+
+## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for any features or fixes.
 
