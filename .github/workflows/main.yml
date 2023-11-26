@@ -8,13 +8,14 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: node
+      - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 12
+          node-version: 16  # Updated to Node.js 16
           registry-url: https://registry.npmjs.org
-      - name: publish
+      - name: Install dependencies
+        run: npm install
+      - name: Publish to npm
         run: npm publish --access public 
-        working-directory: ./ 
         env:
-            NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH }}
