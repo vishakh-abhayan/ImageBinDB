@@ -1,4 +1,5 @@
 # ImageBinDB 💫
+![binDb](https://github.com/vishakh-abhayan/ImageBinDB/assets/94307781/d22501f1-7b57-4ca7-8288-7bb041675dea)
 
 ## Introduction
 
