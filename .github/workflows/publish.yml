@@ -27,6 +27,8 @@ jobs:
         uses: changesets/action@v1
         with:
           publish: npm run release
+          setupGitUser: true
+          createGithubReleases: true
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_AUTH }}
           NPM_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
