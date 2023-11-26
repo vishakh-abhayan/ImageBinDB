@@ -12,17 +12,14 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   publish:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    if: github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: npm/action-setup@v2
-        with:
-          version: 7
       - uses: actions/setup-node@v3
         with:
-          node-version: 16.x
-          cache: "pnpm"
+          node-version: '16.x'
+          cache: 'npm'
 
       - run: npm install --frozen-lockfile
       - name: Create Release Pull Request or Publish
@@ -33,3 +30,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+
