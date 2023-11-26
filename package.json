@@ -1,6 +1,6 @@
 {
   "name": "imagebindb",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": " convert images to binary data, store them in IndexedDB, and retrieve and convert them back to images",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
